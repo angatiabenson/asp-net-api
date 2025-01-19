@@ -13,7 +13,19 @@ namespace MusicAPI.Mappers
                 Artist = song.Artist,
                 Album = song.Album,
                 Genre = song.Genre,
-                Year = song.Year
+                Year = song.Year,
+            };
+        }
+
+        public static Song ToStockFromCreateSong(this CreateSongRequest createSongRequest)
+        {
+            return new Song
+            {
+                Title = createSongRequest.Title,
+                Artist = createSongRequest.Artist,
+                Album = createSongRequest.Album,
+                Genre = createSongRequest.Genre,
+                Year = createSongRequest.Year,
             };
         }
     }
