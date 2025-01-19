@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MusicAPI.Data;
+using MusicAPI.Interfaces;
+using MusicAPI.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApiDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<ISongRepository, SongRepository>();
 
 var app = builder.Build();
 
