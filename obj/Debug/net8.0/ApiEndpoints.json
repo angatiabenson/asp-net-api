@@ -1,48 +1,28 @@
 [
   {
-    "ContainingType": "MusicAPI.Controllers.SongsController",
-    "Method": "Get",
-    "RelativePath": "api/Songs",
+    "ContainingType": "MusicAPI.Controllers.SongController",
+    "Method": "GetAll",
+    "RelativePath": "api/song",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[MusicAPI.Models.Song, MusicAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "MusicAPI.Controllers.SongsController",
-    "Method": "Post",
-    "RelativePath": "api/Songs",
-    "HttpMethod": "POST",
+    "ContainingType": "MusicAPI.Controllers.SongController",
+    "Method": "GetById",
+    "RelativePath": "api/song/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "song",
-        "Type": "MusicAPI.Models.Song",
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "MusicAPI.Models.Song",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   }
 ]
